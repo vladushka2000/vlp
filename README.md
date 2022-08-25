@@ -22,7 +22,7 @@ pip install -r requirements.txt
 ```
 4) Запустите файлик `src/main.py` через pycharm или командой
 ```bash
-python src/main/py
+python src/main.py
 ```
 5) Теперь приложение запущено и доступно по адресу `localhost:8001/docs`
 
