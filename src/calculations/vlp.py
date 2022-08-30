@@ -2,10 +2,10 @@ import numpy as np
 from src.calculations.well import calc_pwf
 
 
-def calc_vlp(inclinometry: dict, casing: dict, tubing: dict, pvt: dict,
+async def calc_vlp(inclinometry: dict, casing: dict, tubing: dict, pvt: dict,
              p_wh: float, geo_grad: float, h_res: float):
 
-    q_liq = np.linspace(0.001, 400, 20)
+    q_liq = np.linspace(0.001, 400, 7)
     p_wf = np.empty_like(q_liq)
 
     for i, ql in enumerate(q_liq):
