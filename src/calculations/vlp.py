@@ -2,7 +2,7 @@ import numpy as np
 from src.calculations.well import calc_pwf
 
 
-async def calc_vlp(inclinometry: dict, casing: dict, tubing: dict, pvt: dict,
+def calc_vlp(inclinometry: dict, casing: dict, tubing: dict, pvt: dict,
              p_wh: float, geo_grad: float, h_res: float):
 
     q_liq = np.linspace(0.001, 400, 7)
@@ -21,7 +21,7 @@ async def calc_vlp(inclinometry: dict, casing: dict, tubing: dict, pvt: dict,
 if __name__ == "__main__":
     import json
 
-    with open("../../../contracts/vlp_in.json") as f:
+    with open("test_data/vlp_in.json") as f:
         data = json.load(f)
     results = calc_vlp(**data)
     print(results)
